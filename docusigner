@@ -1,0 +1,11 @@
+#!/bin/bash
+
+PFX_FILE="certs/my.pfx"
+INPUT_PDF=$1
+OUTPUT_PDF=$2
+java -jar BatchPDFSignPortable.jar --key ${PFX_FILE} --input ${INPUT_PDF} --password "" --output ${OUTPUT_PDF}
+echo "################################################"
+echo "########### Comprobando firma de documento #####"
+echo "################################################"
+pdfsig ${OUTPUT_PDF}
+

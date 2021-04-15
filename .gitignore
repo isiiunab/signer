@@ -1,0 +1,5 @@
+*.jar
+certs/
+.vagrant/
+*.pdf
+pass.txt
